@@ -76,4 +76,4 @@
 
 
 ## Output dari kode
-![alt text](?raw=true)
+![alt text](https://github.com/daffarj/PemlanTugas1/blob/main/public/Screenshot%202025-03-10%20213446.png?raw=true)
