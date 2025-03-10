@@ -37,8 +37,8 @@ public class Mobil {
     }
 
     // menambah method untuk menghitung jarak (np. 7)
-    public double hitungJarak(double kecepatanpermtr, double waktu){
-        return (waktu*kecepatanpermtr);
+    public double hitungJarak(double kecepatan, double waktu){
+        return (waktu*kecepatan);
     }
 
 
