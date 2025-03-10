@@ -76,4 +76,4 @@
 
 
 ## Output dari kode
-![image](Screenshot 2025-03-10 213446.png)
+![alt text](?raw=true)
