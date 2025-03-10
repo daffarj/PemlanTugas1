@@ -17,8 +17,9 @@ public class Mobil {
         this.manufaktur = manufaktur;
     }
 
+    //rubah kecepatan langsung dipanggil di setKecepatan
     public void setKecepatan(double kecepatan){
-        this.kecepatan = kecepatan;
+        this.kecepatan = rubahkecepatan(kecepatan);
     }
     
     // method setWaktu dalam parameter double (no. 4) 
@@ -46,8 +47,8 @@ public class Mobil {
         System.out.println("Mobil anda adalah bermerek " + manufaktur);
         System.out.println("Mempunyai nomor plat " + noPlat);
         System.out.println("Serta memiliki warna " + warna);
-        System.out.println("dan mampu menempuh kecepatan " + kecepatan + " km/jam");
-        System.out.printf("Atau %.2f m/s %n", rubahkecepatan(kecepatan));
+        System.out.println("dan mampu menempuh kecepatan " + (kecepatan/3.6) + " km/jam");
+        System.out.printf("Atau %.2f m/s %n", kecepatan);
         System.out.println("dengan waktu tempuh " + waktu/3600 + " jam");
         System.out.println("Atau dengan waktu " + waktu + " detik");
         System.out.println("Atau dengan jarak meter " + hitungJarak(kecepatan, waktu/3600)*1000 + " m");
