@@ -76,4 +76,4 @@
 
 
 ## Output dari kode
-![image](https://github.com/user-attachments/assets/c72f0b74-a196-4d5f-b3ee-f6925879cb69)
+![image](Screenshot 2025-03-10 213446.png)
