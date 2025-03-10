@@ -17,7 +17,6 @@ public class Mobil {
         this.manufaktur = manufaktur;
     }
 
-    //rubah kecepatan langsung dipanggil di setKecepatan
     public void setKecepatan(double kecepatan){
         this.kecepatan = rubahkecepatan(kecepatan);
     }
@@ -34,13 +33,14 @@ public class Mobil {
 
     // menambah method untuk mengubah kecepatan dari km/h ke m/s (no.6)
     private double rubahkecepatan(double cpatan){
-        return cpatan*(3.6);
+        return cpatan/(3.6);
     }
 
     // menambah method untuk menghitung jarak (np. 7)
     public double hitungJarak(double kecepatanpermtr, double waktu){
         return (waktu*kecepatanpermtr);
     }
+
 
 
     public void display(){
@@ -51,10 +51,10 @@ public class Mobil {
         System.out.printf("Atau %.2f m/s %n", kecepatan);
         System.out.println("dengan waktu tempuh " + waktu/3600 + " jam");
         System.out.println("Atau dengan waktu " + waktu + " detik");
-        System.out.println("Atau dengan jarak meter " + hitungJarak(kecepatan, waktu/3600)*1000 + " m");
+        System.out.println("Atau dengan jarak meter " + hitungJarak(kecepatan*3.6, waktu/3600)*1000 + " m");
         
         // output jarak km (no. 8)
-        System.out.println("Atau dengan jarak tempuh " + hitungJarak(kecepatan, waktu/3600) + " km");
+        System.out.println("Atau dengan jarak tempuh " + hitungJarak(kecepatan*3.6, waktu/3600) + " km");
         System.out.println();
     }
 }
