@@ -35,12 +35,12 @@
 
 ### 4. Menambahkan method `rubahkecepatan` untuk mengubah satuan kecepatan dari km/h menjadi m/s
 > - Method ini hanya dapat dipanggil di class mobil, artinya ini enkapsulasi **private** User tidak bisa mengubah satuan waktu secara langsung dari luar class Mobil
-> - Dipanggil pada method `display` untuk menampilkan kecepatan dalam satuan m/s
+> - Dipanggil pada method `setKecepatan` untuk merubah kecepatan dalam satuan m/s
 
 ```java
     // menambah method untuk mengubah kecepatan dari km/h ke m/s (no.6)
     private double rubahkecepatan(double cpatan){
-        return cpatan*(3.6);
+        return cpatan/(3.6);
     }
 ```
 
@@ -48,28 +48,34 @@
 
 ### 5. Menambahkan method `hitungJarak` yang berfungsi untuk menghitung jarak yang ditempuh oleh mobil dalam satuan meter
 ```java
-     // menambah method untuk menghitung jarak (np. 7)
-    public double hitungJarak(double kecepatanpermtr, double waktu){
-        return (waktu*kecepatanpermtr);
+    // menambah method untuk menghitung jarak (np. 7)
+    public double hitungJarak(double kecepatan, double waktu){
+        return (waktu*kecepatan);
     }
 ```
 
 </br>
 
-### 6. Menambahkan output pada method `display`, yaitu jarak tempuh mobil yang dikonversi menjadi satuan km dari meter
+### 6. merubah kecepatan di method 'setKecepatan' inputan user dengan satuan km/h menjadi m/s 
+```java
+public void setKecepatan(double kecepatan){
+        this.kecepatan = rubahkecepatan(kecepatan);
+    }
+```
+### 7. Menambahkan output pada method `display`, yaitu jarak tempuh mobil yang dikonversi menjadi satuan km dari meter
 ```java
     public void display(){
         System.out.println("Mobil anda adalah bermerek " + manufaktur);
         System.out.println("Mempunyai nomor plat " + noPlat);
         System.out.println("Serta memiliki warna " + warna);
-        System.out.println("dan mampu menempuh kecepatan " + kecepatan + " km/jam");
-        System.out.printf("Atau %.2f m/s %n", rubahkecepatan(kecepatan));
+        System.out.println("dan mampu menempuh kecepatan " + (kecepatan/3.6) + " km/jam");
+        System.out.printf("Atau %.2f m/s %n", kecepatan);
         System.out.println("dengan waktu tempuh " + waktu/3600 + " jam");
         System.out.println("Atau dengan waktu " + waktu + " detik");
-        System.out.println("Atau dengan jarak meter " + hitungJarak(kecepatan, waktu/3600)*1000 + " m");
+        System.out.println("Atau dengan jarak meter " + hitungJarak(kecepatan*3.6, waktu/3600)*1000 + " m");
         
         // output jarak km (no. 8)
-        System.out.println("Atau dengan jarak tempuh " + hitungJarak(kecepatan, waktu/3600) + " km");
+        System.out.println("Atau dengan jarak tempuh " + hitungJarak(kecepatan*3.6, waktu/3600) + " km");
         System.out.println();
     }
 ```
